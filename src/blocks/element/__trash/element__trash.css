@@ -1,0 +1,21 @@
+.element__trash {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    top: -270px;
+    left: 250px;
+    border: none;
+    background: url(../../../images/trash.svg) no-repeat scroll 0 0 transparent;
+    background-position: center;
+    cursor: pointer;
+    
+}
+
+.element__trash:hover {
+    opacity: 0.6;
+}
+
+.element__trash:focus {
+    outline: none;
+}

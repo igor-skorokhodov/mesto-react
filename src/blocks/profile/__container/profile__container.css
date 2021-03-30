@@ -1,0 +1,23 @@
+.profile__container {
+    display: grid;
+    grid-template-columns: 120px 294px 10px;
+    grid-auto-rows: minmax(min-content, max-content);
+    gap: 16px;
+    align-items: center;
+    grid-template-areas: 
+    "avatar name button"
+    "avatar profession .";
+}
+
+@media screen and (max-width: 950px) {
+    .profile__container {
+        grid-template-columns: 220px;
+        gap: 10px;
+        justify-items: center;
+        grid-template-areas: 
+        "avatar avatar"
+        "name button"
+        "profession profession";
+        margin-bottom: 36px;
+    }
+}

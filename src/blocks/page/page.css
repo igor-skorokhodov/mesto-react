@@ -1,0 +1,10 @@
+.page {
+    background-color: #000000;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, "Arial", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
