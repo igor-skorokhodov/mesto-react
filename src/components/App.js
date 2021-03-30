@@ -4,7 +4,7 @@ import Main from '../components/Main.js'
 import Footer from '../components/Footer.js'
 import React from 'react';
 import Card from '../components/Card.js'
-import api from '../utils/Api.js'
+import api from '../utils/api.js'
 import PopupWithForm from './PopupWithForm.js'
 import ImagePopup from './ImagePopup.js'
 
@@ -20,6 +20,8 @@ function App() {
       .then((data) => {
         setCards(data);
       })
+      .catch((err) => {
+        console.log(`упс, возникла ошибка! ${err}}`);
   }, [])
 
 function handleEditAvatarClick() {

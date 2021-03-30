@@ -1,5 +1,5 @@
 import React from 'react'
-import api from '../utils/Api.js'
+import api from '../utils/api.js'
 import Avatarpen from '../images/pen_avatar.svg';
 
 
@@ -17,7 +17,9 @@ function Main (props) {
         setUserName(data.name);
         setUserDescription(data.about);
         setUserAvatar(data.avatar);
-      });
+      })
+      .catch((err) => {
+        console.log(`упс, возникла ошибка! ${err}}`);;
   }, [])
 
     return (
