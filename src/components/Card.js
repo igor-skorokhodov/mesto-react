@@ -3,9 +3,9 @@ import React from 'react'
 
 
 function Card (props) {
-
   function handleClick() {
     props.onCardClick({url: props.url, name: props.name});
+    props.clickOnImage();
   }  
 
     return (
