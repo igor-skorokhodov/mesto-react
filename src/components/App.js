@@ -66,27 +66,21 @@ React.useEffect(() => {
 <Header />
 <Main onEditProfile={handleEditProfileClick} onEditAvatar={handleEditAvatarClick} 
    onAddPlace={handleAddPlaceClick} setSelectedCardOn={setSelectedCard} onImage={handleImageClick}/>
-<PopupWithForm idButton="avatarSaveButton" aria-Label="Обновить аватар"  buttonText="Сохранить" name="form_changeavatar" title="Обновить аватар" isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}>
-  <form class="popup__form-input" name="form_changeavatar" id="form_changeavatar" novalidate>
+<PopupWithForm formName="form_changeavatar" formId="form_changeavatar" idButton="avatarSaveButton" aria-Label="Обновить аватар"  buttonText="Сохранить" name="form_changeavatar" title="Обновить аватар" isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}>
     <input class="popup__form popup__form-input-error popup__form_info_name-avatar" type="url" name="avatar" placeholder="Ввести url аватара" id="popup__form-error_name-avatar" required />
     <span class="popup__form-error popup__form-error_name-avatar"></span>
-  </form>
 </PopupWithForm>
-<PopupWithForm idButton="redactionButton" aria-Label="Сохранить информацию в профиле"  buttonText="Сохранить" name="form_redaction" title="Редактировать профиль" isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}>
-  <form class="popup__form-input" name="form_redaction" id="form_redaction" novalidate method="POST">
-    <input class="popup__form popup__form_info_name" type="text" name="name" required id="popup__form-error_name" minlength="2" maxlength="40" placeholder="Имя"/>
-    <span class="popup__form-error popup__form-error_name"></span>
-    <input class="popup__form popup__form_info_job" type="text" name="job" required minlength="2" maxlength="200" id="popup__form-error_job" placeholder="Профессия"/>
-    <span class="popup__form-error popup__form-error_job"></span>
-  </form>
+<PopupWithForm formId="form_redaction" formName="form_reduction" idButton="redactionButton" aria-Label="Сохранить информацию в профиле"  buttonText="Сохранить" name="form_redaction" title="Редактировать профиль" isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}>
+  <input class="popup__form popup__form_info_name" type="text" name="name" required id="popup__form-error_name" minlength="2" maxlength="40" placeholder="Имя"/>
+  <span class="popup__form-error popup__form-error_name"></span>
+  <input class="popup__form popup__form_info_job" type="text" name="job" required minlength="2" maxlength="200" id="popup__form-error_job" placeholder="Профессия"/>
+  <span class="popup__form-error popup__form-error_job"></span>
 </PopupWithForm>
-<PopupWithForm idButton="addButton" aria-Label="Добавить карточку"  buttonText="Создать" name="form_add" title="Новое место" isOpen={isAddPlacePopupOpen} onClose={closeAllPopups}>
-  <form class="popup__form-input" name="form_add" id="form_add" novalidate>
+<PopupWithForm formName="form_add" formId="form_add" idButton="addButton" aria-Label="Добавить карточку"  buttonText="Создать" name="form_add" title="Новое место" isOpen={isAddPlacePopupOpen} onClose={closeAllPopups}>
     <input class="popup__form popup__form-input-error popup__form_info_name-picture" type="text" name="name_pic" placeholder="Название" id="popup__form-error_name-picture" minlength="2" maxlength="30" required/>
     <span class="popup__form-error popup__form-error_name-picture"></span>
     <input class="popup__form popup__form-input-error popup__form_info_url" type="url" name="link"  placeholder="Ссылка на картинку" id="popup__form-error_url" required/>
     <span class="popup__form-error popup__form-error_url"></span>
-  </form>
 </PopupWithForm>
 <ImagePopup card={selectedCard} isOpen={isImagePopupOpen} onClose={closeAllPopups} />  
 <Footer />

@@ -1,5 +1,5 @@
 import React from 'react'
-import api from '../utils/api.js'
+import api from '../utils/Api.js'
 import Avatarpen from '../images/pen_avatar.svg'
 import Card from '../components/Card.js'
 
