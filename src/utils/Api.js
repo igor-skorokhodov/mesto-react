@@ -78,6 +78,14 @@ userAvatarUpdate(link) { //загрузили новый аватар
   return res.json();
 }
 
+changeLikeCardStatus(id, isLiked) {
+    return fetch(`${this._url}cards/likes/${id}`, {
+      method: isLiked ? "PUT" : "DELETE",
+      headers: this._headers
+    })
+      .then((res) => this._getResponseData(res)) 
+  }
+
 }
 
 const api = new Api ({ //создаем экземпляр класса API

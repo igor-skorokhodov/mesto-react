@@ -53,3 +53,4 @@
 @import url(./blocks/profile/__avatar/_container/profile__avatar_container.css);
 @import url(./blocks/profile/__avatar/_pen/profile__avatar_pen.css);
 @import url(./blocks/popup/__close-button/_delete/popup__close_delete.css);
+@import url(./blocks/element/__trash/_hidden/element__trash_hidden.css);
