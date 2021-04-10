@@ -1,5 +1,6 @@
 import React from 'react'
 import {UserInfoContext} from '../contexts/CurrentUserContext.js'
+import PopupWithForm from '../components/PopupWithForm.js'
 
 function EditAvatarPopup (props) {
   const [avatar, setAvatar] = React.useState(' ');
@@ -29,17 +30,10 @@ React.useEffect(() => {
   }, [currentUser]); 
 
     return (
-      <div className={`popup popup_type_${props.name} ${props.isOpen ? 'popup_active' : ''}`}>
-        <div className="popup__container">
-          <button className="popup__close-button" onClick={props.onClose} type="button" aria-label="Закрыть окно" id="close_button_edit"></button>
-          <h3 className="popup__title">Обновить аватар</h3>
-          <form onSubmit={handleSubmit} className="popup__form-input" name="form_changeavatar" id="form_changeavatar" noValidate method="POST">
-            <input onChange={handleChangeAvatar} value={comment} className="popup__form popup__form-input-error popup__form_info_name-avatar" type="url" name="avatar" placeholder="Ввести url аватара" id="popup__form-error_name-avatar" required />
-            <span className="popup__form-error popup__form-error_name-avatar">{!url ? 'Введите корректный url' : '' }</span>
-        </form>
-        <button onClick={handleSubmit} type="submit" className="popup__add-button popup__submit" id="reductionSaveButton" aria-label="Сохранить">Сохранить</button>
-        </div>
-      </div>
+    <PopupWithForm buttonText="Сохранить" name={props.name} isOpen={props.isOpen} onClose={props.onClose} title="Обновить аватар" submit={handleSubmit} click={handleSubmit}> 
+      <input onChange={handleChangeAvatar} value={comment} className="popup__form popup__form-input-error popup__form_info_name-avatar" type="url" name="avatar" placeholder="Ввести url аватара" id="popup__form-error_name-avatar" required />
+      <span className="popup__form-error popup__form-error_name-avatar"></span>
+    </PopupWithForm>
     )}
 
 export default EditAvatarPopup
