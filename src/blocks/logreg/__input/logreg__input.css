@@ -1,0 +1,10 @@
+.logreg__input {
+    border: none;
+    width: 100%;
+    border-bottom: 2px solid #CCCCCC;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: black;
+    margin-bottom: 30px;
+    color: white;
+}
